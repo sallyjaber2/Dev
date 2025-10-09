@@ -1,5 +1,5 @@
 # 🚀 Simple FastAPI Project
-
+d
 This is a very simple **FastAPI** project that displays a word on the homepage.
 
 ---
