@@ -21,3 +21,6 @@ def whoiam():
      return "Sally"
 
 
+@app.get('/test_pipeline')
+def whowrotethis():
+    return "your pipeline is working fine"
