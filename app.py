@@ -1,3 +1,7 @@
+
+
+
+
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
@@ -11,3 +15,9 @@ def home():
 @app.get('/whowrotethis')
 def whowrotethis():
     return "ahmad alkurdi"
+
+@app.get('/whoiam')
+def whoiam():
+     return "Sally"
+
+
