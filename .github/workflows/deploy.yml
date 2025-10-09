@@ -37,7 +37,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
            cd /home/ubuntu/simple-fastapi
-           docker pull your-dockerhub/simple-fastapi:latest
+           docker pull sallyjaber2/simple-fastapi:latest
            docker stop fastapi-app || true
            docker rm fastapi-app || true
-           docker run -d -p 8000:8000 --name fastapi-app your-dockerhub/simple-fastapi:latest
+           docker run -d -p 8000:8000 --name fastapi-app sallyjaber2/simple-fastapi:latest
