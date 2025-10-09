@@ -38,6 +38,9 @@ jobs:
           script: |
            cd /home/ubuntu/simple-fastapi
            docker pull sallyjaber2/simple-fastapi:latest
+           # Stop and remove any container using port 8000
+           docker ps -q --filter "publish=8000" | xargs -r docker stop
+           docker ps -aq --filter "publish=8000" | xargs -r docker rm
            docker stop fastapi-app || true
            docker rm fastapi-app || true
            docker run -d -p 8000:8000 --name fastapi-app sallyjaber2/simple-fastapi:latest
