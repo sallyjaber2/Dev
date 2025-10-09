@@ -34,7 +34,7 @@ jobs:
         with:
           host: 54.166.204.162
           username: ubuntu
-          key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFnleNCROi7sH9QXQXVdjJalV2XldYCmPEt6N24nB2nY github-actions@ec2'
+          key: ${EC2_SSH_KEY}
           script: |
             cd /home/ubuntu/simple-fastapi
             docker pull sallyjaber2/simple-fastapi:latest
