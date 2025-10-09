@@ -32,13 +32,12 @@ jobs:
       - name: SSH into EC2 and deploy
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: 54.166.204.162
-          username: ubuntu
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/ubuntu/simple-fastapi
-            docker pull sallyjaber2/simple-fastapi:latest
-            docker stop fastapi-app || true
-            docker rm fastapi-app || true
-            docker run -d -p 8000:8000 --name fastapi-app sallyjaber2/simple-fastapi:latest
-
+           cd /home/ubuntu/simple-fastapi
+           docker pull your-dockerhub/simple-fastapi:latest
+           docker stop fastapi-app || true
+           docker rm fastapi-app || true
+           docker run -d -p 8000:8000 --name fastapi-app your-dockerhub/simple-fastapi:latest
