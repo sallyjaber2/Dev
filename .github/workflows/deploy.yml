@@ -34,7 +34,7 @@ jobs:
         with:
           host: 54.166.204.162
           username: ubuntu
-          key: ${{secrets.EC2_SSH_KEY}}
+          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu/simple-fastapi
             docker pull sallyjaber2/simple-fastapi:latest
