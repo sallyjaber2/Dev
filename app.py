@@ -28,3 +28,8 @@ def whowrotethis():
 @app.get('/test_pipeline')
 def whowrotethis():
     return "Sally"
+
+
+@app.get('/testQ')
+def whowrotethis():
+    return "QQQ"
