@@ -25,11 +25,10 @@ def whoiam():
 def whowrotethis():
     return "your pipeline is working fine"
 
-@app.get('/test_pipeline')
+
+@app.get('/test_Git')
 def whowrotethis():
-    return "Sally"
+    return "your pipelinee"
 
 
-@app.get('/testQ')
-def whowrotethis():
-    return "QQQ"
+
